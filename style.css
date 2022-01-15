@@ -9,9 +9,10 @@ body{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 90px;
+    margin-top: 35px;
     margin-left: -110px;
 }
+
 .site-name h2{
     font-weight: bold;
     font-size: 24px;
@@ -67,6 +68,14 @@ body{
     font-size: 16px;
     line-height: 24px;
 }
+.button:hover{
+    background-color: transparent;
+    cursor: pointer;
+    border: 2px solid rgb(230, 16, 87); 
+    color:rgb(230, 16, 87) ;
+    transform: rotate(360deg);
+    transition: transform 1s ease-in-out;
+}
 .button span{
     padding: 8px;
 }
@@ -75,9 +84,9 @@ body{
 }
 .header-content .image-png img{
     position: relative;
-    top: 35px;
-    bottom: 11px;
-    left: -125px;
+    top: 65px;
+    bottom: 0px;
+    left: 0px;
     height: 445px;
     width: 415px;
 }
@@ -120,30 +129,15 @@ body{
     color: rgb(230, 16, 87);
     margin-left: 1200px;
 }
-.feature{
-  display: flex;
+/* replacement of feature content  */
+.album{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   padding: 5px;
-  margin-left: 30px;
+    margin: 11px 20px 0px 150px;
+    row-gap: 20px;
 }
-.feature-content{
-    padding: 10px;
-    margin-left: 60px;
-    margin-top: -15px;
-}
-.feature-content h1{
-    font-weight: bold;
-    font-size: 38px;
-    line-height: 60px;
-}
-.feature-content p{
-    color: #6C6C6C;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 28px;
-}
-.button.btn{
-    border-radius: 0px;
-}
+
 .footer-content{
     /* width: 100%; */
     background-color: rgb(4, 4, 53);
@@ -165,3 +159,89 @@ body{
 .footer-content>.fab{
     margin-left: 10px;
 }
+
+
+/* |||||||||||||||||||||||||||||
+ codes for mobile responsive site 
+ |||||||||||||||||||||||||||||||*/
+ @media (max-width: 688px) {
+    .site-name{
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 36px;
+        margin-left: 100px;
+    }
+    .menu{
+        display: none;
+    }
+    .main-header .nav{
+        flex-direction: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .header-content{
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .content h1{
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 50px;
+    }
+     .image-binder{
+         display: flex;
+         flex-wrap: wrap;
+     }
+     .header-content .image-svg img{
+        position: absolute;
+        left: 0px;
+     }
+     .header-content .image-png img{
+        position: relative;
+        top: 35px;
+        bottom: 11px;
+        left:10px;
+        height: 345px;
+        width: 315px;
+    }
+    .company-logo{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        row-gap: 30px;
+        margin-top: 200px;
+    }
+    .main-content{
+        display: grid;   
+        grid-template-columns: repeat(1, 1fr); 
+    
+    }
+    .album{
+        grid-template-columns: repeat(1, 1fr);
+    }
+ }
+ /* .........................
+ codes for medium devices 
+ ..............................*/
+ @media (min-width: 688px) and (max-width:980px) {
+    .site-name{
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 36px;
+        margin-left: 100px;
+    }
+    .company-logo{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        row-gap: 30px;
+        margin-top: 600px;
+    } 
+    .main-content{
+        display: grid;   
+        grid-template-columns: repeat(2, 1fr); 
+    
+    }
+    .album{
+        grid-template-columns: repeat(2, 1fr);
+    }
+ }
